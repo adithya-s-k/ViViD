@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="ViViD: A unified Vision Language Model for Document Understanding that combines layout detection, OCR, table parsing, and more."
+    />
+    <meta
+      name="keywords"
+      content="Document Understanding, Vision Language Models, OCR, Layout Detection"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      ViViD: Vision Language model for Unified Visual Understanding of Documents
+    </title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/index.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                ViViD: Vision Language model for Unified Visual Understanding of
+                Documents
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <!-- Author names would go here -->
+                <span class="author-block">
+                  <a href="https://adithyask.com">Adithya S Kolavi</a><sup>1</sup>,</span>
+                <span class="author-block">
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"> <a href="https://cognitivelab.in/">CognitiveLab</a></span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- PDF Link. -->
+                  <span class="link-block">
+                    <a
+                      href="#"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper(Coming Soon)</span>
+                    </a>
+                  </span>
+                  <!-- Code Link. -->
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/adithya-s-k/ViViD"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                  <!-- Dataset Link. -->
+                  <span class="link-block">
+                    <a
+                      href="https://huggingface.co/v1v1d"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="far fa-images"></i>
+                      </span>
+                      <span>Data</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <!-- <div class="hero-body">
+          <img src="/api/placeholder/800/400" alt="ViViD Overview" />
+          <h2 class="subtitle has-text-centered">
+            <span class="vivid">ViViD</span> unifies multiple document
+            understanding tasks into a single model, streamlining complex
+            document processing.
+          </h2>
+        </div> -->
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                In an era where documents are increasingly complex—spanning
+                intricate layouts, mathematical expressions, and structured
+                tables , complex diagrams — the need for a unified approach to
+                document understanding has never been greater. Current
+                approaches to document analysis rely on multiple specialized
+                models, each dedicated to a single task such as layout
+                detection, OCR, table parsing, math expression recognition, or
+                image captioning. This fragmented approach often results in
+                resource-intensive and heavy pipelines, making it challenging to
+                deploy efficiently.
+              </p>
+              <p>
+                We introduce ViViD—Visual Interpretation using Vision Language
+                Models for Documents—a framework that consolidates diverse
+                document analysis tasks into a single, unified model capable of
+                performing essential tasks, such as layout detection, OCR, table
+                parsing, math expression recognition, and image captioning.Its
+                flexible and customizable design allows for a more integrated
+                understanding of documents, as it can interpret complex
+                structures and relationships across tasks. ViViD is optimized to
+                adapt to various document types and analysis requirements,
+                making it both powerful and versatile.
+              </p>
+              <p>
+                At the core of ViViD is a Vision Language Model (VLM) fine-tuned
+                through a novel multi-task strategy, optimizing its ability to
+                handle diverse document structures in a streamlined pipeline. A
+                key innovation of ViViD lies in finding the most effective
+                multi-task fine-tuning strategy, striking a balance between high
+                performance and comprehensive task coverage. Our experiments
+                demonstrate that ViViD significantly enhances document
+                understanding, offering a reliable, efficient solution for
+                industries such as finance, legal, and research, where analyzing
+                complex documents is critical. The model resulting from this
+                framework, ViViD-0.7B, provides a robust, all-in-one tool for
+                handling a wide range of document analysis tasks, with the added
+                benefit of being deployable on resource-constrained
+                environments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Method. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Method</h2>
+            <div class="content has-text-justified">
+              <p>
+                ViViD leverages Vision Language Models (VLMs) with
+                parameter-efficient fine-tuning techniques to achieve multi-task
+                performance in a single framework. We experimented with both
+                full fine-tuning and LoRA (Low-Rank Adaptation) fine-tuning to
+                handle diverse document understanding tasks.
+              </p>
+              <!-- <img src="/api/placeholder/800/400" alt="ViViD Method Overview" /> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Results. -->
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Results</h2>
+
+            <h3 class="title is-4">Multi-task Document Understanding</h3>
+            <div class="content has-text-justified">
+              <p>
+                ViViD demonstrates strong performance across various document
+                understanding tasks:
+              </p>
+              <ul>
+                <li>Layout Detection</li>
+                <li>OCR</li>
+                <li>Table Extraction</li>
+                <li>Math Expression Recognition</li>
+                <li>Image Captioning</li>
+              </ul>
+            </div>
+
+            <!-- <div class="columns is-centered">
+              
+              <div class="column">
+                <img src="/api/placeholder/400/300" alt="Layout Detection" />
+                <p class="caption">Layout Detection</p>
+              </div>
+              <div class="column">
+                <img src="/api/placeholder/400/300" alt="Table Extraction" />
+                <p class="caption">Table Extraction</p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{AdithyaSKolavi2024ViViD,
+          title     = {ViViD: Vision Language Model for Unified Visual Understanding of Documents},
+          author    = {Adithya S Kolavi},
+          year      = {2024},
+          url       = {https://github.com/adithya-s-k/ViViD},
+          abstract  = {
+              "ViViD integrates multiple document analysis tasks into a single model, reducing the need for multiple specialized models and enhancing efficiency for complex document understanding."
+          }
+        }</code></pre>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This website is licensed under a
+                <a
+                  rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  >Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a
+                >
+
+                and based on
+                <a
+                  rel="license"
+                  href="https://github.com/nerfies/nerfies.github.io"
+                  >Nerfies</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      .vivid {
+        font-weight: bold;
+        color: #2980b9;
+      }
+
+      .publication-title {
+        font-family: 'Google Sans', sans-serif;
+      }
+
+      .caption {
+        font-size: 0.8em;
+        text-align: center;
+        margin-top: 0.5em;
+      }
+    </style>
+  </body>
+</html>
