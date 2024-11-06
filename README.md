@@ -1,10 +1,11 @@
 <div  align="center">
 <h2>ViViD</h2>
 </div>
----
 <div  align="center">
 <h4>Vision Language model for Unified Visual Understanding of Documents</h4>
 </div>
+
+---
 
 ViViD integrates multiple document analysis tasks into a single model, reducing the need for multiple specialized models and enhancing efficiency for complex document understanding.
 
